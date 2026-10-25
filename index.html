@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CS Library Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Computer Science Library Portal</h1>
+  </header>
+
+  <div class="card">
+    <h2>Library Catalog</h2>
+    
+    <!-- Search and Filter Tools -->
+    <div class="tools">
+      <input type="text" id="searchInput" placeholder="Search by title or author..." onkeyup="filterBooks()">
+      
+      <select id="statusFilter" onchange="filterBooks()">
+        <option value="all">All Books</option>
+        <option value="available">Available Only</option>
+        <option value="borrowed">Borrowed Only</option>
+      </select>
+    </div>
+
+    <!-- The Book List -->
+    <div id="bookList">
+      
+      <!-- Book 1 -->
+      <div class="book" data-status="available">
+        <h3>Introduction to Algorithms</h3>
+        <p>Author: Thomas H. Cormen</p>
+        <span class="status available" onclick="toggleStatus(this)">Available</span>
+      </div>
+
+      <!-- Book 2 -->
+      <div class="book" data-status="borrowed">
+        <h3>Clean Code</h3>
+        <p>Author: Robert C. Martin</p>
+        <span class="status borrowed" onclick="toggleStatus(this)">Borrowed</span>
+      </div>
+
+      <!-- Book 3 -->
+      <div class="book" data-status="available">
+        <h3>Database System Concepts</h3>
+        <p>Author: Abraham Silberschatz</p>
+        <span class="status available" onclick="toggleStatus(this)">Available</span>
+      </div>
+
+      <!-- Book 4 -->
+      <div class="book" data-status="available">
+        <h3>Operating System Concepts</h3>
+        <p>Author: Abraham Silberschatz</p>
+        <span class="status available" onclick="toggleStatus(this)">Available</span>
+      </div>
+
+      <!-- Book 5 -->
+      <div class="book" data-status="borrowed">
+        <h3>Artificial Intelligence: A Modern Approach</h3>
+        <p>Author: Stuart Russell</p>
+        <span class="status borrowed" onclick="toggleStatus(this)">Borrowed</span>
+      </div>
+
+      <!-- Book 6 -->
+      <div class="book" data-status="available">
+        <h3>Computer Networking: A Top-Down Approach</h3>
+        <p>Author: James Kurose</p>
+        <span class="status available" onclick="toggleStatus(this)">Available</span>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
