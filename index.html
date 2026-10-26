@@ -12,7 +12,7 @@
 
   <div class="card">
     <h2>Library Catalog</h2>
-    
+ <p id="bookCount">Showing 6 books</p>   
     <!-- Search and Filter Tools -->
     <div class="tools">
       <input type="text" id="searchInput" placeholder="Search by title or author..." onkeyup="filterBooks()">
@@ -23,7 +23,13 @@
         <option value="borrowed">Borrowed Only</option>
       </select>
     </div>
-
+    <!-- ADD NEW BOOK FORM -->
+    <div class="add-book-form">
+      <h3>Add New Book</h3>
+      <input type="text" id="newTitle" placeholder="Book Title">
+      <input type="text" id="newAuthor" placeholder="Author Name">
+      <button onclick="addBook()">Add to Library</button>
+    </div>
     <!-- The Book List -->
     <div id="bookList">
       

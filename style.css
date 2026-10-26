@@ -105,4 +105,106 @@ h2 {
 #statusFilter {
   background-color: white;
   cursor: pointer;
+}/* ✨ POLISH: Hover effects for a premium feel */
+.book {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.status {
+  cursor: pointer;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.status:hover {
+  opacity: 0.8;
+}
+
+/* ✨ POLISH: Modern search bar focus */
+#searchInput:focus, #statusFilter:focus {
+  outline: none;
+  border-color: #1e3a8a; /* The dark blue from your header */
+  box-shadow: 0 0 8px rgba(30, 58, 138, 0.3);
+}
+
+/* ✨ POLISH: Styling the book counter */
+#bookCount {
+  margin-top: -10px;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}/* ✨ POLISH: Hover effects for a premium feel */
+.book {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.status {
+  cursor: pointer;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.status:hover {
+  opacity: 0.8;
+}
+
+/* ✨ POLISH: Modern search bar focus */
+#searchInput:focus, #statusFilter:focus {
+  outline: none;
+  border-color: #1e3a8a; /* The dark blue from your header */
+  box-shadow: 0 0 8px rgba(30, 58, 138, 0.3);
+}
+
+/* ✨ POLISH: Styling the book counter */
+#bookCount {
+  margin-top: -10px;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}/* ✨ ADMIN: Add Book Form */
+.add-book-form {
+  background-color: #f8fafc;
+  border: 1px dashed #94a3b8;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.add-book-form h3 {
+  margin-top: 0;
+  font-size: 16px;
+  color: #1e3a8a;
+}
+
+.add-book-form input {
+  padding: 8px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 30%;
+}
+
+.add-book-form button {
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  padding: 9px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.add-book-form button:hover {
+  background-color: #152c68;
 }

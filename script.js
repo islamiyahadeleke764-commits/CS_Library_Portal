@@ -40,4 +40,44 @@ function filterBooks() {
       book.style.display = 'none';  // Hide
     }
   });
+  // ✨ POLISH: Update the counter based on how many books are visible
+  let visibleCount = 0;
+  books.forEach(book => {
+    if (book.style.display !== 'none') {
+      visibleCount++;
+    }
+  });
+  
+  const countText = document.getElementById('bookCount');
+  if (countText) {
+    countText.innerHTML = "Showing " + visibleCount + " book(s)";
+  }}
+// 3. Add a New Book Dynamically
+function addBook() {
+  const title = document.getElementById('newTitle').value;
+  const author = document.getElementById('newAuthor').value;
+
+  if (title === "" || author === "") {
+    alert("Please enter both a title and an author!");
+    return;
+  }
+
+  const bookList = document.getElementById('bookList');
+  const newBook = document.createElement('div');
+  newBook.className = 'book';
+  newBook.setAttribute('data-status', 'available');
+
+  newBook.innerHTML = `
+    <h3>${title}</h3>
+    <p>Author: ${author}</p>
+    <span class="status available" onclick="toggleStatus(this)">Available</span>
+  `;
+
+  bookList.appendChild(newBook);
+
+  document.getElementById('newTitle').value = "";
+  document.getElementById('newAuthor').value = "";
+
+  filterBooks(); 
+  alert("Success! " + title + " has been added to the library.");
 }
